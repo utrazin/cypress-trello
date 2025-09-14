@@ -1,6 +1,6 @@
 describe('Listas Trello', () => {
     beforeEach(() => {
-        cy.loginTrello(Cypress.env('TRELLO_USER'), Cypress.env('TRELLO_PASS'));
+        cy.loginTrello(Cypress.env('TRELLO_USER'), Cypress.env('TRELLO_PASS'), 'ATV 1');
     });
 
     it('Deve criar uma lista', () => {

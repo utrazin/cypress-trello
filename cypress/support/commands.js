@@ -1,4 +1,4 @@
-Cypress.Commands.add('loginTrello', (email, password) => {
+Cypress.Commands.add('loginTrello', (email, password, boardName) => {
     cy.viewport(1280, 720);
     cy.visit('https://trello.com/login');
 
@@ -8,7 +8,12 @@ Cypress.Commands.add('loginTrello', (email, password) => {
     cy.get('#password').type(password);
     cy.get('input[type="checkbox"]').click();
     cy.get('#login-submit').click();
-    cy.origin('https://trello.com', () => {
-        cy.contains('ATV 1', { timeout: 15000 }).click();
-    });
+    cy.acessarBoard(boardName);
 });
+
+Cypress.Commands.add('acessarBoard', (name) => {
+    cy.wait(3000);
+    cy.origin('https://trello.com', { args: { name } }, ({ name }) => {
+        cy.contains(name, { timeout: 15000 }).click();
+    });
+})
