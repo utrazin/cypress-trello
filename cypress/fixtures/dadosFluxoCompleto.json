@@ -1,0 +1,9 @@
+{
+    "boardName": "Board Criado Pelo Cypress",
+    "cardName": "Card Gerado pelo Cypress",
+    "cardNameEdit": "Card Gerado e Editado Pelo Cypress",
+    "cardPosition": 1,
+    "labelName": "Etiqueta Cypress",
+    "labelNameEdit": "Etiqueta Editada Cypress",
+    "cardDescription": "Descrição Gerada Pelo Cypress"
+}
