@@ -108,9 +108,9 @@ describe('Cards Trello', () => {
                 cy.get('span[aria-label="Ações"]', { timeout: 15000 }).click();
                 cy.get('span[data-testid="MoveIcon"]').click();
                 cy.get('div[data-testid="move-card-popover-select-list-destination-select--value-container"]').click();
-                cy.contains('div > li', 'Board Exemplo 1').click();
+                cy.contains('div > li', dados.cardFixo).click();
                 cy.get('button[data-testid="move-card-popover-move-button"]').click();
-                cy.contains('div > div > span', 'Board Exemplo 1').should('be.visible');
+                cy.contains('div > div > span', dados.cardFixo).should('be.visible');
             });
         });
     });
